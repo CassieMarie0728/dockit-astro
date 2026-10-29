@@ -1,6 +1,8 @@
 ---
-title: "Existing screens and unfinished wiring"
+title: "Grief Ops Suite: Existing screens and unfinished wiring"
+description: "Grief Ops Suite documentation \u2014 Existing screens and unfinished wiring."
 sidebar:
+  label: "Existing screens and unfinished wiring"
   order: 5
 ---
 

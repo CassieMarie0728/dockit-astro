@@ -1,6 +1,8 @@
 ---
-title: "Tutorial: bring up a local Forge"
+title: "Jekyll Forge: Tutorial: bring up a local Forge"
+description: "Jekyll Forge documentation \u2014 Tutorial: bring up a local Forge."
 sidebar:
+  label: "Tutorial: bring up a local Forge"
   order: 7
 ---
 

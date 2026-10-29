@@ -1,6 +1,8 @@
 ---
 title: "Configure a local MCP Hub"
+description: "MCP Hub documentation \u2014 Configure a local MCP Hub."
 sidebar:
+  label: "Configure a local MCP Hub"
   order: 6
 ---
 

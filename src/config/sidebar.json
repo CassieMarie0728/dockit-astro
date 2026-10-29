@@ -18,6 +18,10 @@
         {
           "label": "Setup validation",
           "slug": "validation"
+        },
+        {
+          "label": "Glossary",
+          "slug": "glossary"
         }
       ]
     },
@@ -87,6 +91,10 @@
         {
           "label": "Editorial rules",
           "slug": "maintaining-the-codex"
+        },
+        {
+          "label": "Source review index",
+          "slug": "source-review"
         }
       ]
     }

@@ -1,6 +1,8 @@
 ---
-title: "Client, server and AI boundaries"
+title: "Snippet Bubble Manager v2: Client, server and AI boundaries"
+description: "Snippet Bubble Manager v2 documentation \u2014 Client, server and AI boundaries."
 sidebar:
+  label: "Client, server and AI boundaries"
   order: 6
 ---
 

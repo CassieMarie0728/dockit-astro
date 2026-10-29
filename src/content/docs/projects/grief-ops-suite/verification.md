@@ -1,6 +1,8 @@
 ---
-title: "Verification backlog"
+title: "Grief Ops Suite: Verification backlog"
+description: "Grief Ops Suite documentation \u2014 Verification backlog."
 sidebar:
+  label: "Verification backlog"
   order: 3
 ---
 

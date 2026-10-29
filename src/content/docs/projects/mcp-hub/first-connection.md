@@ -1,6 +1,8 @@
 ---
-title: "Tutorial: add and check a server"
+title: "MCP Hub: Tutorial: add and check a server"
+description: "MCP Hub documentation \u2014 Tutorial: add and check a server."
 sidebar:
+  label: "Tutorial: add and check a server"
   order: 7
 ---
 

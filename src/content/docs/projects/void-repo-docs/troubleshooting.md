@@ -1,6 +1,8 @@
 ---
-title: "Troubleshooting VOID output and providers"
+title: "VOID Repo Docs: Troubleshooting VOID output and providers"
+description: "VOID Repo Docs documentation \u2014 Troubleshooting VOID output and providers."
 sidebar:
+  label: "Troubleshooting VOID output and providers"
   order: 12
 ---
 

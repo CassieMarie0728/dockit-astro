@@ -1,6 +1,8 @@
 ---
-title: "Verification backlog"
+title: "Snippet Bubble Manager v2: Verification backlog"
+description: "Snippet Bubble Manager v2 documentation \u2014 Verification backlog."
 sidebar:
+  label: "Verification backlog"
   order: 3
 ---
 

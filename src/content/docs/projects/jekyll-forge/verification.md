@@ -1,6 +1,8 @@
 ---
-title: "Verification backlog"
+title: "Jekyll Forge: Verification backlog"
+description: "Jekyll Forge documentation \u2014 Verification backlog."
 sidebar:
+  label: "Verification backlog"
   order: 3
 ---
 

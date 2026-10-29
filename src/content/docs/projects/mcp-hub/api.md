@@ -1,6 +1,8 @@
 ---
-title: "MCP API: implementation and specification"
+title: "MCP Hub: MCP API: implementation and specification"
+description: "MCP Hub documentation \u2014 MCP API: implementation and specification."
 sidebar:
+  label: "MCP API: implementation and specification"
   order: 4
 ---
 

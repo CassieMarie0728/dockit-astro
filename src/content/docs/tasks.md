@@ -24,3 +24,7 @@ Choose a task. Each guide states whether it is source-guided, locally checked or
 ## Choose the evidence you need
 
 A static site build verifies the docs can be generated. A source walkthrough explains implementation. A local assertion checks a bounded behavior. Only a completed end-to-end acceptance run can establish a live user workflow.
+
+## Find a term or maintain a page
+
+[Glossary](/glossary/) · [Source review index](/source-review/) · [Editing and validation](/maintaining-the-codex/)

@@ -1,6 +1,8 @@
 ---
-title: "Cloudflare architecture and configuration"
+title: "Jekyll Forge: Cloudflare architecture and configuration"
+description: "Jekyll Forge documentation \u2014 Cloudflare architecture and configuration."
 sidebar:
+  label: "Cloudflare architecture and configuration"
   order: 5
 ---
 

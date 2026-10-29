@@ -1,6 +1,8 @@
 ---
-title: "Verification backlog"
+title: "VOID Repo Docs: Verification backlog"
+description: "VOID Repo Docs documentation \u2014 Verification backlog."
 sidebar:
+  label: "Verification backlog"
   order: 3
 ---
 

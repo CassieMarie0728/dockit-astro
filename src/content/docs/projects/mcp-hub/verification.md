@@ -1,6 +1,8 @@
 ---
-title: "Verification backlog"
+title: "MCP Hub: Verification backlog"
+description: "MCP Hub documentation \u2014 Verification backlog."
 sidebar:
+  label: "Verification backlog"
   order: 3
 ---
 

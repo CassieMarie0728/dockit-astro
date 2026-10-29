@@ -1,6 +1,8 @@
 ---
-title: "Known issue: mixed Replace Matches imports"
+title: "Snippet Bubble Manager v2: Known issue: mixed Replace Matches imports"
+description: "Snippet Bubble Manager v2 documentation \u2014 Known issue: mixed Replace Matches imports."
 sidebar:
+  label: "Known issue: mixed Replace Matches imports"
   order: 12
 ---
 

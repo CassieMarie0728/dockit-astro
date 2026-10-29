@@ -1,6 +1,8 @@
 ---
-title: "Setup and commands"
+title: "Jekyll Forge: Setup and commands"
+description: "Jekyll Forge documentation \u2014 Setup and commands."
 sidebar:
+  label: "Setup and commands"
   order: 2
 ---
 
