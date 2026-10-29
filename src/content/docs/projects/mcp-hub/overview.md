@@ -18,3 +18,9 @@ Package content SHA at review: `a9b39815fb23f54e225168911a34fe04d6ce9ef5`.
 
 [Setup and commands](/projects/mcp-hub/setup/) · [Verification backlog](/projects/mcp-hub/verification/)
 
+
+## Source walkthrough
+
+[Architecture and implementation notes](/projects/mcp-hub/architecture/)
+
+[Configuration guide](/projects/mcp-hub/configuration/)

@@ -18,3 +18,9 @@ Package content SHA at review: `65d98d2a0e13c12cf4b43bed726f23e129006026`.
 
 [Setup and commands](/projects/jekyll-forge/setup/) · [Verification backlog](/projects/jekyll-forge/verification/)
 
+
+## Source walkthrough
+
+[Architecture and implementation notes](/projects/jekyll-forge/architecture/)
+
+[Workflow guide](/projects/jekyll-forge/workflows/)

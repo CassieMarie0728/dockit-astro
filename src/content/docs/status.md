@@ -1,27 +1,28 @@
 ---
-title: "Documentation status"
+title: Documentation status
 sidebar:
-  order: 1
+  order: 2
 ---
 
-Review date: **October 29, 2026**. This is a first documentation foundation, not a certification that the applications work.
+Review date: **October 29, 2026**. Phase 2 adds implementation walkthroughs; it does not certify application readiness.
 
-| Project | Evidence reviewed | Still needed |
+| Project | Source-backed coverage | Still needs execution |
 | --- | --- | --- |
-| [MCP Hub](/projects/mcp-hub/overview/) | Package scripts and dependencies | Source walkthrough, environment guide and runtime validation |
-| [Jekyll Forge](/projects/jekyll-forge/overview/) | Package scripts and dependencies | Source walkthrough, environment guide and runtime validation |
-| [Snippet Bubble Manager v2](/projects/snippet-bubble-manager-v2/overview/) | Package scripts and dependencies | Source walkthrough, environment guide and runtime validation |
-| [VOID Repo Docs](/projects/void-repo-docs/overview/) | Package scripts and dependencies | Source walkthrough, environment guide and runtime validation |
-| [New Badass Novel Writing App](/projects/new-badass-novel-writing-app/overview/) | README only | Product decisions and implementation |
-| [Grief Ops Suite](/projects/grief-ops-suite/overview/) | Package scripts and dependencies | Source walkthrough, environment guide and runtime validation |
+| [MCP Hub](/projects/mcp-hub/architecture/) | Request flow, auth boundary, tRPC procedure reference, environment mapping | Login, database, remote server discovery and tool calls |
+| [Jekyll Forge](/projects/jekyll-forge/architecture/) | Worker bindings, API guards, route map and deployment distinctions | Clean D1 setup, GitHub authorization, editing and publishing |
+| [Snippet Bubble Manager v2](/projects/snippet-bubble-manager-v2/workflows/) | Local storage, import/export, overlay permission flow and AI boundaries | Android build, two-device sync, backup round trip and quota tests |
+| [VOID Repo Docs](/projects/void-repo-docs/workflows/) | Generation flow, provider selection, draft storage and configuration | Live model calls, refine flow, Notion export and Android packaging |
+| [Novel Writing App](/projects/new-badass-novel-writing-app/planning/) | Proposed product decisions and first milestone | Product decisions and implementation |
+| [Grief Ops Suite](/projects/grief-ops-suite/architecture/) | Screen map, feature flags and identified startup/service gaps | Entry wiring, dependencies, working flows and persistence |
 
-## MCP Hub API
+## API reconciliation
 
-The separate API repository contains specifications and documentation. No root package manifest or executable service was found in the inspected tree. Treat its endpoints as a documented contract awaiting implementation validation.
+MCP Hub’s inspected executable exposes tRPC under `/api/trpc`. The companion REST/OpenAPI documents are not evidence that `/connections` routes exist in that server. [Read the implementation reference](/projects/mcp-hub/api/).
 
-[API reference status](/projects/mcp-hub/api/)
+## Validation boundaries
 
-## Next documentation pass
+The hub’s static build and internal link destinations are checked for this change. Individual applications, OAuth services, model providers, remote databases and production deployments were not invoked. Source links on the new pages pin the exact inspected commits.
 
-Prioritize MCP Hub and API source reconciliation, Jekyll Forge setup, native bubble permissions, VOID generation flow, then Grief Ops workflows. Update evidence and review dates as each section is validated.
+## Next pass
 
+Use the verification pages to exercise each project in a clean environment. Fixes to application code should be isolated in the relevant repository, with the hub updated once behavior changes.

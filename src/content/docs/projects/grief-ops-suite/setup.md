@@ -27,3 +27,7 @@ Clone the repository, inspect its lockfile and environment examples, then instal
 
 `lint` and `test` only print placeholder messages. A zero exit code from those scripts is not evidence of linting or tests passing.
 
+
+## Resolve startup wiring first
+
+The source walkthrough identified a missing root app entry and undeclared navigation dependencies. These scripts describe intended launch commands, not a validated clean install. [Read the startup gaps](/projects/grief-ops-suite/architecture/) before running them.

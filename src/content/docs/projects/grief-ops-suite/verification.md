@@ -8,9 +8,9 @@ sidebar:
 
 ## Before publishing a complete setup guide
 
-- Inspect source entry points and document the actual user workflow.
+- Continue beyond the source walkthrough: validate the documented workflows in a running environment.
 - Identify required runtime versions from repository configuration and lockfiles.
-- Inventory environment variable names from source; publish safe examples only.
+- Validate the source-derived configuration against a clean installation.
 - Confirm authentication, persistence, storage and external service requirements.
 - Run setup in a clean environment and record platform, commit and results.
 - Verify build and quality checks; distinguish placeholders from working checks.
