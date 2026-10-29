@@ -24,3 +24,9 @@ Package content SHA at review: `65d98d2a0e13c12cf4b43bed726f23e129006026`.
 [Architecture and implementation notes](/projects/jekyll-forge/architecture/)
 
 [Workflow guide](/projects/jekyll-forge/workflows/)
+
+## Guided next steps
+
+- [Local quickstart](/projects/jekyll-forge/local-quickstart/)
+- [First draft](/projects/jekyll-forge/first-draft/)
+- [Troubleshooting](/projects/jekyll-forge/troubleshooting/)

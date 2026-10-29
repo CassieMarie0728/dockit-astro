@@ -14,3 +14,8 @@ Planning-stage writing app. The inspected README contains only the project name 
 
 [Design decisions](/projects/new-badass-novel-writing-app/planning/)
 
+
+## Guided next steps
+
+- [Blueprint](/projects/new-badass-novel-writing-app/blueprint/)
+- [Acceptance](/projects/new-badass-novel-writing-app/acceptance/)

@@ -24,3 +24,8 @@ Package content SHA at review: `a9b39815fb23f54e225168911a34fe04d6ce9ef5`.
 [Architecture and implementation notes](/projects/mcp-hub/architecture/)
 
 [Configuration guide](/projects/mcp-hub/configuration/)
+
+## Guided next steps
+
+- [First connection](/projects/mcp-hub/first-connection/)
+- [Troubleshooting](/projects/mcp-hub/troubleshooting/)

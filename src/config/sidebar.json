@@ -10,6 +10,10 @@
         {
           "label": "Documentation status",
           "slug": "status"
+        },
+        {
+          "label": "Setup validation",
+          "slug": "validation"
         }
       ]
     },
