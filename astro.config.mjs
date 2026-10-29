@@ -25,11 +25,6 @@ export default defineConfig({
   integrations: [
     starlight({
       title,
-      logo: {
-        light: logo,
-        dark: logo_darkmode,
-        alt: "DocKit Logo",
-      },
       // @ts-ignore
       social: social.main || [],
       locales,

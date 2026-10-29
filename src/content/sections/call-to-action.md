@@ -1,14 +1,13 @@
 ---
-title: |
-  Ready to explore <span class='light-text'>Dockit experience? </span>
-description: Discover tips, resources, and guidance to maximize experience with our documentation.
+title: Keep the chaos documented.
+description: Find the project. Check the source. Build the next thing.
 enable: true
 fill_button:
   enable: true
-  label: Get Started
-  link: /getting-started/introduction/overview/
+  label: Explore projects
+  link: /start-here/
 outline_button:
   enable: true
-  label: View Docs
-  link: /getting-started/introduction/overview/
+  label: Documentation status
+  link: /status/
 ---
