@@ -57,3 +57,13 @@ VOID export-format descriptions and Grief Ops rendering status are source observ
 The first fragment-aware run found broken `#_top` links on the homepage and 404 page. The shared hero heading now provides that ID; the rerun passed. External URLs are not fetched, so this result does not establish GitHub availability or application runtime health.
 
 See [maintenance commands](/maintaining-the-codex/) for the Python prerequisite and how to validate a fresh build after Sitepins or Git edits.
+
+## Phase 6: navigation semantics and release cleanup
+
+The hub’s static checks now include 12 fixture tests (seven link checks and five structural checks). The generated HTML is checked for one main landmark and heading, duplicate IDs and main-menu semantics. Main-navigation controls use a native button with expanded state, and the sidebar toggle updates its button’s expanded-state attribute. Active-page detection now compares URL paths rather than a full URL with relative paths.
+
+Decorative template image backgrounds were replaced with CSS brand gradients, a Chaos Codex favicon was added, and the undefined secondary-font request was removed. These are hub changes; application defects listed in the [known-issues dashboard](/known-issues/) remain open.
+
+No interactive browser, mobile viewport, screen-reader or contrast audit was performed in this pass. Static semantic checks are a bounded regression check, not accessibility certification.
+
+Phase 6 validation passed: 12 fixture tests, a 52-page Astro build, zero local link/fragment errors and zero structural errors. Rendered active-page markers were also verified on Home, Find a Task, Documentation Status and Known Issues.

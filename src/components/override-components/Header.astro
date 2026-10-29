@@ -14,20 +14,23 @@ const menu = await getTranslations(locale || "en");
 
 const { settings, navigation_button } = config;
 const { main }: { main: any[] } = menu;
-const pathname = Astro.request.url;
+const pathname = Astro.url.pathname;
 
 const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
 ---
 
-<nav class="navbar container">
+<nav class="navbar container" aria-label="Main navigation">
   <!-- logo -->
   <div class="order-0">
     <SiteTitle />
   </div>
   <!-- navbar toggler -->
-  <input id="nav-toggle" type="checkbox" class="hidden" />
-  <label
-    for="nav-toggle"
+  <button
+    id="nav-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="nav-menu"
+    aria-label="Toggle main navigation"
     class="order-3 cursor-pointer flex items-center lg:hidden dark:text-white lg:order-1 hamburger-menu"
   >
     <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
@@ -40,7 +43,7 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
         points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
         transform="rotate(45 10 10)"></polygon>
     </svg>
-  </label>
+  </button>
   <!-- /navbar toggler -->
   <ul
     id="nav-menu"
@@ -90,6 +93,7 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
             <li class="nav-item">
               <a
                 href={menu.url}
+                aria-current={pathname === menu.url || pathname === `${menu.url}/` ? "page" : undefined}
                 class={`nav-link block ${
                   (pathname === `${menu.url}/` || pathname === menu.url) &&
                   "active"
@@ -147,6 +151,24 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
 </nav>
 
 <script>
+  function setupMainMenu() {
+    const button = document.querySelector<HTMLButtonElement>("#nav-toggle");
+    const menu = document.querySelector<HTMLElement>("#nav-menu");
+    if (!button || !menu) return;
+    const close = () => button.setAttribute("aria-expanded", "false");
+    button.onclick = () => button.setAttribute("aria-expanded", String(button.getAttribute("aria-expanded") !== "true"));
+    menu.onclick = (event) => {
+      if ((event.target as Element).closest("a")) close();
+    };
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { close(); button.focus(); }
+    };
+    button.onkeydown = onEscape;
+    menu.onkeydown = onEscape;
+  }
+  setupMainMenu();
+  document.addEventListener("astro:page-load", setupMainMenu);
+
   // add header bg after scroll
   const nav = document.querySelector(".navbar");
   const sidebar = document.querySelector(".sidebar-nav");

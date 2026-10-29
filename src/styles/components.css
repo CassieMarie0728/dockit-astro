@@ -98,3 +98,18 @@
 .list-body li:hover::before {
   background-color: var(--sl-color-white);
 }
+
+/* Decorative brand atmosphere; no image downloads or meaningful image alt text. */
+.hero-bg {
+  min-height: 32rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, #98151840, transparent 65%),
+    linear-gradient(135deg, #a8a9ad0d, transparent 45%);
+}
+.doc-bg {
+  background: radial-gradient(ellipse at 10% 15%, #98151812, transparent 60%);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}

@@ -16,6 +16,10 @@
           "slug": "status"
         },
         {
+          "label": "Known issues",
+          "slug": "known-issues"
+        },
+        {
           "label": "Setup validation",
           "slug": "validation"
         },
