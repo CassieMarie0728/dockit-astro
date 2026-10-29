@@ -33,7 +33,7 @@ Workspace system restrictions blocked both app-server health checks in the recor
 
 ## Hub release follow-up
 
-The hub builds, indexes search and checks static links/structure. Its canonical deployment URL is still unconfigured, so sitemap generation is skipped. Keyboard interactions, narrow-screen layout, search results, theme switching and a screen-reader pass still need interactive browser validation on the deployed site.
+The hub builds, indexes search and checks static links/structure. The GitHub Pages workflow supplies SITE_URL and BASE_PATH. Pages must be enabled with GitHub Actions as Source before the first live deployment. Local builds may omit the URL and skip sitemap generation. [Deployment instructions](/deployment/). Keyboard interactions, narrow-screen layout, search results, theme switching and a screen-reader pass still need interactive browser validation on the deployed site.
 
 ## Closing an issue
 

@@ -45,6 +45,21 @@ class CheckLinksTests(unittest.TestCase):
     def test_empty_build_fails(self):
         self.assertTrue(check_site(self.site({}))[1])
 
+    def test_subpath_links_map_to_artifact_root(self):
+        root = self.site({'index.html': '<a href="/dockit-astro/guide/#step">go</a>',
+                          'guide/index.html': '<h1 id="step">Step</h1>'})
+        self.assertEqual(check_site(root, '/dockit-astro'), (2, []))
+
+    def test_unprefixed_link_fails_for_subpath_host(self):
+        root = self.site({'index.html': '<a href="/guide/">go</a>', 'guide/index.html': ''})
+        self.assertIn('outside deployment base', check_site(root, '/dockit-astro')[1][0])
+
+    def test_script_and_image_sources_are_checked(self):
+        root = self.site({'index.html': '<script src="/dockit-astro/app.js"></script><img src="/dockit-astro/missing.png">', 'app.js': ''})
+        errors = check_site(root, '/dockit-astro')[1]
+        self.assertEqual(len(errors), 1)
+        self.assertIn('missing.png', errors[0])
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -65,3 +65,9 @@ Use the [source review index](/source-review/) to find inspected revisions and a
 `npm run check:structure` checks one main landmark and one main heading per generated page, duplicate IDs, a named main-navigation landmark, and a named menu button with a valid controlled element and expanded-state attribute. The validate command now includes this check after build/link validation.
 
 These checks do not evaluate contrast, visual layout, focus order, live JavaScript interaction or screen-reader usability. Before release, verify the homepage, a long project guide and the known-issues dashboard on a narrow and wide screen. Use keyboard-only navigation to open/close menus, search, follow results and switch themes. Check the deployed site rather than treating a static build as an interactive acceptance pass.
+
+## Release configuration
+
+[Build and release instructions](/deployment/) explain SITE_URL, supported Node/pnpm versions and the checks still needed on the real preview. `npm run validate` now includes canonical-URL parser tests.
+
+For project-site builds, BASE_PATH is also used by the generated-link checker. [GitHub Pages setup](/deployment/) explains the workflow and how to keep editing after the Sitepins trial.

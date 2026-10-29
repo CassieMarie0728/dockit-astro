@@ -1,5 +1,6 @@
 ---
+import { withBase } from "@/lib/utils/base-path.mjs";
 const { label, link, variant } = Astro.props;
 ---
 
-<a href={link} class={`btn btn-${variant}`}>{label}</a>
+<a href={withBase(link)} class={`btn btn-${variant}`}>{label}</a>

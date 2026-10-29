@@ -4,7 +4,7 @@ sidebar:
   order: 2
 ---
 
-Review date: **October 29, 2026**. Phase 6 adds release cleanup, navigation semantics, a known-issues dashboard and static HTML structure checks. It does not certify application readiness.
+Review date: **October 29, 2026**. Phase 7 adds supported hosting runtime pins, explicit canonical-URL configuration and a guarded release build. It does not certify application readiness.
 
 | Project | Source-backed coverage | Still needs execution |
 | --- | --- | --- |
@@ -46,3 +46,11 @@ These application issues are documented here; this hub change does not fix their
 ## Release dashboard
 
 [Known issues and readiness](/known-issues/) consolidates the application limitations and remaining hub release checks. Phase 6 adds semantic navigation controls, active-page markers, decorative brand backgrounds and static HTML structure validation. Interactive browser/accessibility validation remains outstanding.
+
+## Deployment validation
+
+[Deployment guide](/deployment/) separates local build checks from release settings and live browser acceptance. An actual public preview URL is still needed to complete interactive validation.
+
+## Independent GitHub hosting
+
+The [Pages deployment guide](/deployment/) supersedes the earlier root-host-only limitation. The workflow supplies a canonical origin and repository base path. The first hosted run still needs GitHub Actions selected as Pages Source and a successful deployment.

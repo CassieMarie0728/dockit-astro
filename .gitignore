@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # Python documentation-check cache
 __pycache__/
+
+# Local build configuration
+.env.*
+!.env.example

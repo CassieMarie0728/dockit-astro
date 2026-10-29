@@ -1,5 +1,6 @@
 """Check local href destinations and HTML fragment IDs in an Astro static build."""
 import argparse
+import os
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
@@ -18,11 +19,13 @@ class Document(HTMLParser):
             self.ids.add(attrs['id'])
         if tag == 'a' and attrs.get('name'):
             self.ids.add(attrs['name'])
-        if attrs.get('href'):
-            self.links.append(attrs['href'])
+        for attr in ('href', 'src'):
+            if attrs.get(attr):
+                self.links.append(attrs[attr])
 
 
-def check_site(directory):
+def check_site(directory, base_path=""):
+    base_path = "/" + base_path.strip("/") if base_path.strip("/") else ""
     root = Path(directory).resolve()
     pages = sorted(root.rglob('*.html'))
     if not pages:
@@ -31,7 +34,7 @@ def check_site(directory):
     errors = []
     for source, doc in docs.items():
         relative = source.relative_to(root).as_posix()
-        route = '/' + relative
+        route = base_path + '/' + relative
         if route.endswith('index.html'):
             route = route[:-len('index.html')]
         for href in doc.links:
@@ -40,7 +43,11 @@ def check_site(directory):
             if link.scheme or link.netloc:
                 continue
             resolved = urlsplit(urljoin(route, href))
-            target = (root / unquote(resolved.path).lstrip('/')).resolve()
+            path = unquote(resolved.path)
+            if base_path and path != base_path and not path.startswith(base_path + '/'):
+                errors.append(f'{relative}: destination outside deployment base: {href}')
+                continue
+            target = (root / path[len(base_path):].lstrip('/')).resolve()
             if not target.is_relative_to(root):
                 errors.append(f'{relative}: destination escapes build directory: {href}')
                 continue
@@ -65,8 +72,9 @@ def check_site(directory):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('directory', nargs='?', default='dist')
+    parser.add_argument('--base', default=os.environ.get('BASE_PATH', ''))
     args = parser.parse_args()
-    count, errors = check_site(args.directory)
+    count, errors = check_site(args.directory, args.base)
     for error in errors:
         print(error)
     print(f'Checked {count} HTML pages; {len(errors)} link errors.')
