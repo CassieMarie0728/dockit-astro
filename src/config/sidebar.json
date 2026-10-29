@@ -1,80 +1,85 @@
 {
   "main": [
     {
-      "label": "Getting Started",
-      "translations": {
-        "fr": "Commencer"
-      },
+      "label": "Start Here",
       "items": [
         {
-          "label": "[seti:vite] Introduction",
-          "translations": {
-            "fr": "[seti:vite] Introduction"
-          },
-          "items": [
-            { "autogenerate": { "directory": "getting-started/introduction" } }
-          ]
+          "label": "Welcome",
+          "slug": "start-here"
         },
         {
-          "label": "[setting] Global Settings",
-          "translations": {
-            "fr": "[setting] Paramètres globaux"
-          },
-          "items": [
-            { "autogenerate": { "directory": "getting-started/global-settings" } }
-          ]
-        },
-        {
-          "label": "[seti:plan] Navigation",
-          "translations": {
-            "fr": "[seti:plan] Navigation"
-          },
-          "slug": "getting-started/navigation"
+          "label": "Documentation status",
+          "slug": "status"
         }
       ]
     },
     {
-      "label": "Content",
-      "translations": {
-        "fr": "Contenu"
-      },
+      "label": "MCP Hub",
       "items": [
         {
-          "label": "[document] Components and Block",
-          "translations": {
-            "fr": "[document] Composants et blocs"
-          },
-          "items": [
-            { "autogenerate": { "directory": "contents/components" } }
-          ]
-        },
-        {
-          "label": "[pencil] Editing Content",
-          "translations": {
-            "fr": "[pencil] Édition du contenu"
-          },
-          "items": [
-            { "autogenerate": { "directory": "contents/editing" } }
-          ]
+          "autogenerate": {
+            "directory": "projects/mcp-hub"
+          }
         }
       ]
     },
     {
-      "label": "Reference",
-      "translations": {
-        "fr": "Référence"
-      },
+      "label": "Jekyll Forge",
       "items": [
-        { "autogenerate": { "directory": "reference" } }
+        {
+          "autogenerate": {
+            "directory": "projects/jekyll-forge"
+          }
+        }
       ]
     },
     {
-      "label": "Configurations",
-      "translations": {
-        "fr": "Configurations"
-      },
+      "label": "Snippet Bubble Manager v2",
       "items": [
-        { "autogenerate": { "directory": "configurations" } }
+        {
+          "autogenerate": {
+            "directory": "projects/snippet-bubble-manager-v2"
+          }
+        }
+      ]
+    },
+    {
+      "label": "VOID Repo Docs",
+      "items": [
+        {
+          "autogenerate": {
+            "directory": "projects/void-repo-docs"
+          }
+        }
+      ]
+    },
+    {
+      "label": "New Badass Novel Writing App",
+      "items": [
+        {
+          "autogenerate": {
+            "directory": "projects/new-badass-novel-writing-app"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Grief Ops Suite",
+      "items": [
+        {
+          "autogenerate": {
+            "directory": "projects/grief-ops-suite"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Maintain the Codex",
+      "items": [
+        {
+          "label": "Editorial rules",
+          "slug": "maintaining-the-codex"
+        }
       ]
     }
   ]

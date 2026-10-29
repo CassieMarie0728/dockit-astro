@@ -5,94 +5,63 @@
       "url": "/"
     },
     {
-      "name": "Documentation",
-      "url": "/getting-started/introduction/overview/"
+      "name": "Projects",
+      "url": "/start-here/"
     },
     {
-      "name": "Reference",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Configuration",
-          "url": "/reference/configuration/"
-        },
-        {
-          "name": "Plugins Reference",
-          "url": "/reference/plugin/"
-        }
-      ]
+      "name": "Docs Status",
+      "url": "/status/"
     }
   ],
   "footer": {
     "community": {
-      "title": "Join Our Community",
+      "title": "Source Code",
       "links": [
         {
-          "name": "GitHub Discussions",
-          "url": "https://github.com/themefisher/dockit/discussions"
+          "name": "GitHub Projects",
+          "url": "https://github.com/CassieMarie0728"
         },
         {
-          "name": "Discord Community",
-          "url": "/"
+          "name": "Documentation Status",
+          "url": "/status/"
         },
         {
-          "name": "Twitter Updates",
-          "url": "/"
-        },
-        {
-          "name": "Contributing Guide",
-          "url": "/"
+          "name": "Maintain the Codex",
+          "url": "/maintaining-the-codex/"
         }
       ]
     },
     "help_links": {
-      "title": "Helpful Links",
+      "title": "Find Your Way",
       "links": [
         {
-          "name": "Getting Started",
-          "url": "/"
+          "name": "GitHub Projects",
+          "url": "https://github.com/CassieMarie0728"
         },
         {
-          "name": "Privacy Policy",
-          "url": "/privacy-policy"
+          "name": "Documentation Status",
+          "url": "/status/"
         },
         {
-          "name": "Terms and Conditions",
-          "url": "/terms-conditions"
-        },
-        {
-          "name": "About Us",
-          "url": "/about"
-        },
-        {
-          "name": "Troubleshooting",
-          "url": "/"
+          "name": "Maintain the Codex",
+          "url": "/maintaining-the-codex/"
         }
       ]
     },
     "company": {
-      "title": "Resources",
+      "title": "Keep It Useful",
       "links": [
         {
-          "name": "Documentation Hub",
-          "url": "/docs/"
+          "name": "GitHub Projects",
+          "url": "https://github.com/CassieMarie0728"
         },
         {
-          "name": "Theme Gallery",
-          "url": "/"
+          "name": "Documentation Status",
+          "url": "/status/"
         },
         {
-          "name": "Best Practices",
-          "url": "/"
-        },
-        {
-          "name": "Performance Tips",
-          "url": "/"
-        },
-        {
-          "name": "Migration Guide",
-          "url": "/"
+          "name": "Maintain the Codex",
+          "url": "/maintaining-the-codex/"
         }
       ]
     }
