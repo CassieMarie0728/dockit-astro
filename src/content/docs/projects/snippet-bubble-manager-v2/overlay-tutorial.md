@@ -1,6 +1,8 @@
 ---
-title: "Tutorial: enable the Android bubble"
+title: "Snippet Bubble Manager v2: Tutorial: enable the Android bubble"
+description: "Snippet Bubble Manager v2 documentation \u2014 Tutorial: enable the Android bubble."
 sidebar:
+  label: "Tutorial: enable the Android bubble"
   order: 11
 ---
 

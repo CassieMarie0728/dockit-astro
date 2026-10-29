@@ -1,6 +1,8 @@
 ---
-title: "Tutorial: export and import snippets"
+title: "Snippet Bubble Manager v2: Tutorial: export and import snippets"
+description: "Snippet Bubble Manager v2 documentation \u2014 Tutorial: export and import snippets."
 sidebar:
+  label: "Tutorial: export and import snippets"
   order: 10
 ---
 

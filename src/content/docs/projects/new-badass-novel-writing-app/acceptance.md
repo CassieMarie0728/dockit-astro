@@ -1,6 +1,8 @@
 ---
-title: "Blueprint: recovery and export acceptance"
+title: "New Badass Novel Writing App: Blueprint: recovery and export acceptance"
+description: "New Badass Novel Writing App documentation \u2014 Blueprint: recovery and export acceptance."
 sidebar:
+  label: "Blueprint: recovery and export acceptance"
   order: 4
 ---
 

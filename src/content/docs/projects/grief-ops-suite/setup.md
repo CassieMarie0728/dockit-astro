@@ -1,6 +1,8 @@
 ---
-title: "Setup and commands"
+title: "Grief Ops Suite: Setup and commands"
+description: "Grief Ops Suite documentation \u2014 Setup and commands."
 sidebar:
+  label: "Setup and commands"
   order: 2
 ---
 

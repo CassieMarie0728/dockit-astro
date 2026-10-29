@@ -12,7 +12,10 @@
     "preview": "astro preview",
     "check": "astro check",
     "deploy:cf-workers": "npm run build && wrangler deploy",
-    "preview:cf-workers": "npm run build && wrangler dev"
+    "preview:cf-workers": "npm run build && wrangler dev",
+    "check:links": "python3 scripts/check_links.py",
+    "test:links": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+    "validate": "npm run test:links && npm run build && npm run check:links"
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",

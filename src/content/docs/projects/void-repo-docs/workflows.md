@@ -1,6 +1,8 @@
 ---
-title: "Generate, revise and retain a document"
+title: "VOID Repo Docs: Generate, revise and retain a document"
+description: "VOID Repo Docs documentation \u2014 Generate, revise and retain a document."
 sidebar:
+  label: "Generate, revise and retain a document"
   order: 5
 ---
 

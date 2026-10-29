@@ -4,7 +4,7 @@ sidebar:
   order: 2
 ---
 
-Review date: **October 29, 2026**. Phase 4 adds task navigation, Snippet Bubbles/VOID tutorials and a more precise Grief Ops readiness audit. It does not certify application readiness.
+Review date: **October 29, 2026**. Phase 5 adds project-specific search titles, a glossary, source-review tracking and repeatable build/link validation. It does not certify application readiness.
 
 | Project | Source-backed coverage | Still needs execution |
 | --- | --- | --- |
@@ -38,3 +38,7 @@ Use the verification pages to exercise each project in a clean environment. Fixe
 - Grief Ops’ registered home screens and shared Text/Button controls return null. [Readiness gates](/projects/grief-ops-suite/readiness/).
 
 These application issues are documented here; this hub change does not fix their source code.
+
+## Hub maintenance checks
+
+`npm run validate` runs link-checker fixture tests, builds the hub and checks generated local destinations and heading anchors. See [maintenance instructions](/maintaining-the-codex/). This checks documentation integrity only.

@@ -1,6 +1,8 @@
 ---
-title: "Setup and commands"
+title: "VOID Repo Docs: Setup and commands"
+description: "VOID Repo Docs documentation \u2014 Setup and commands."
 sidebar:
+  label: "Setup and commands"
   order: 2
 ---
 

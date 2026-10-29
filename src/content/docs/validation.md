@@ -49,3 +49,11 @@ A separate assertion reproduced the mixed-batch replacement defect: starting wit
 The inspected snippet commit is `51c0e8047bc5a8c3b574ab6bbd328e4e4b252bd9`. The VOID export/refinement audit used `e5b347312236bb2c6ab78233b01ea94c453a5f36`; Grief Ops readiness used `85534f2bcb8965e34c29742ed097c6c0443c0ad1`.
 
 VOID export-format descriptions and Grief Ops rendering status are source observations, not browser/download or app-runtime tests. No real snippets, provider keys, Notion pages or user documents were used.
+
+## Phase 5: repeatable hub quality checks
+
+`npm run validate` passed on October 29, 2026: seven checker fixture tests, a 51-page Astro build, and zero local href/heading-fragment errors in the generated site. The fixture tests cover relative/root links, query strings, encoded IDs, missing destinations, missing anchors, skipped external schemes, asset hrefs, text fragments and an empty build.
+
+The first fragment-aware run found broken `#_top` links on the homepage and 404 page. The shared hero heading now provides that ID; the rerun passed. External URLs are not fetched, so this result does not establish GitHub availability or application runtime health.
+
+See [maintenance commands](/maintaining-the-codex/) for the Python prerequisite and how to validate a fresh build after Sitepins or Git edits.

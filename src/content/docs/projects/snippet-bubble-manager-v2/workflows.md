@@ -1,6 +1,8 @@
 ---
-title: "Library, backup and floating bubble"
+title: "Snippet Bubble Manager v2: Library, backup and floating bubble"
+description: "Snippet Bubble Manager v2 documentation \u2014 Library, backup and floating bubble."
 sidebar:
+  label: "Library, backup and floating bubble"
   order: 5
 ---
 

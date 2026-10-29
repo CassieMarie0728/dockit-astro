@@ -28,3 +28,33 @@ Project guides live in `src/content/docs/projects/`. Navigation lives in `src/co
 
 Use the checked-in lockfile with its package manager. Run the declared `build` script to generate the site. This repository’s current dependency versions must be available in the chosen registry before a reproducible build is possible.
 
+
+## Edit through Sitepins or Git
+
+Preserve the Markdown frontmatter at the top of each page. Use `title` for the full, project-specific search/page title and `sidebar.label` for a concise navigation label. Keep `sidebar.order` numeric. Change a page’s filename only when you also update links and navigation that use its route.
+
+New project pages belong under `src/content/docs/projects/<project>/`; the existing sidebar autogenerates those folders. A new top-level page needs an explicit navigation link. After saving an edit, review its Git diff so unintended deletions or changed source links are visible.
+
+## Repeatable quality checks
+
+The link checker requires **Python 3.9+** as well as the Node dependency toolchain. Run from the repository root:
+
+```sh
+npm run test:links
+npm run build
+npm run check:links
+```
+
+Or run all three in order:
+
+```sh
+npm run validate
+```
+
+`check:links` parses the generated HTML in `dist`. It fails on missing local destinations and missing HTML fragment IDs, including relative links. It checks local stylesheet/asset href destinations too. External URLs and non-web schemes are skipped; it does not call GitHub or verify external uptime. A missing/empty build fails rather than reporting a false clean result.
+
+Run `validate` after edits so the checked build is current. Running only `check:links` against yesterday’s `dist` cannot validate today’s Markdown.
+
+## Reviewing source changes
+
+Use the [source review index](/source-review/) to find inspected revisions and affected guides. Keep the [validation record](/validation/) and [documentation status](/status/) aligned with the evidence. Site generation and link checks do not establish that an application’s live login, publishing, provider calls or native device behavior works.

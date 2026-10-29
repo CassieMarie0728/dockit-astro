@@ -1,6 +1,8 @@
 ---
-title: "Troubleshooting Snippet Bubbles"
+title: "Snippet Bubble Manager v2: Troubleshooting Snippet Bubbles"
+description: "Snippet Bubble Manager v2 documentation \u2014 Troubleshooting Snippet Bubbles."
 sidebar:
+  label: "Troubleshooting Snippet Bubbles"
   order: 13
 ---
 

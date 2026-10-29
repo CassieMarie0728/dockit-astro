@@ -1,6 +1,8 @@
 ---
-title: "Tutorial: keep and export a VOID draft"
+title: "VOID Repo Docs: Tutorial: keep and export a VOID draft"
+description: "VOID Repo Docs documentation \u2014 Tutorial: keep and export a VOID draft."
 sidebar:
+  label: "Tutorial: keep and export a VOID draft"
   order: 10
 ---
 

@@ -1,6 +1,8 @@
 ---
-title: "Architecture and request flow"
+title: "MCP Hub: Architecture and request flow"
+description: "MCP Hub documentation \u2014 Architecture and request flow."
 sidebar:
+  label: "Architecture and request flow"
   order: 5
 ---
 

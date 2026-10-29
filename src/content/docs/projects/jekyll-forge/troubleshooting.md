@@ -1,6 +1,8 @@
 ---
-title: "Troubleshooting local Forge"
+title: "Jekyll Forge: Troubleshooting local Forge"
+description: "Jekyll Forge documentation \u2014 Troubleshooting local Forge."
 sidebar:
+  label: "Troubleshooting local Forge"
   order: 9
 ---
 

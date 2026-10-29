@@ -1,6 +1,8 @@
 ---
-title: "Readiness: what must work before a user tutorial"
+title: "Grief Ops Suite: Readiness: what must work before a user tutorial"
+description: "Grief Ops Suite documentation \u2014 Readiness: what must work before a user tutorial."
 sidebar:
+  label: "Readiness: what must work before a user tutorial"
   order: 6
 ---
 

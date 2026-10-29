@@ -1,6 +1,8 @@
 ---
 title: "Troubleshooting MCP Hub"
+description: "MCP Hub documentation \u2014 Troubleshooting MCP Hub."
 sidebar:
+  label: "Troubleshooting MCP Hub"
   order: 8
 ---
 

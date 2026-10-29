@@ -1,6 +1,8 @@
 ---
-title: "Editor routes and project map"
+title: "Jekyll Forge: Editor routes and project map"
+description: "Jekyll Forge documentation \u2014 Editor routes and project map."
 sidebar:
+  label: "Editor routes and project map"
   order: 6
 ---
 

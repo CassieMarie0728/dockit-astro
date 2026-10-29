@@ -1,6 +1,8 @@
 ---
-title: "Tutorial: refine without losing your original"
+title: "VOID Repo Docs: Tutorial: refine without losing your original"
+description: "VOID Repo Docs documentation \u2014 Tutorial: refine without losing your original."
 sidebar:
+  label: "Tutorial: refine without losing your original"
   order: 11
 ---
 

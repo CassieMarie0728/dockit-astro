@@ -1,6 +1,8 @@
 ---
-title: "Web and Android configuration"
+title: "VOID Repo Docs: Web and Android configuration"
+description: "VOID Repo Docs documentation \u2014 Web and Android configuration."
 sidebar:
+  label: "Web and Android configuration"
   order: 6
 ---
 

@@ -1,6 +1,8 @@
 ---
-title: "Setup and commands"
+title: "Snippet Bubble Manager v2: Setup and commands"
+description: "Snippet Bubble Manager v2 documentation \u2014 Setup and commands."
 sidebar:
+  label: "Setup and commands"
   order: 2
 ---
 

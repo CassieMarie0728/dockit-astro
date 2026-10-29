@@ -1,6 +1,8 @@
 ---
-title: "Blueprint: a draft you can trust"
+title: "New Badass Novel Writing App: Blueprint: a draft you can trust"
+description: "New Badass Novel Writing App documentation \u2014 Blueprint: a draft you can trust."
 sidebar:
+  label: "Blueprint: a draft you can trust"
   order: 3
 ---
 

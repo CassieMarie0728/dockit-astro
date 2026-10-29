@@ -1,6 +1,8 @@
 ---
-title: "Tutorial: connect a repo and save a draft"
+title: "Jekyll Forge: Tutorial: connect a repo and save a draft"
+description: "Jekyll Forge documentation \u2014 Tutorial: connect a repo and save a draft."
 sidebar:
+  label: "Tutorial: connect a repo and save a draft"
   order: 8
 ---
 

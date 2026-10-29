@@ -1,6 +1,8 @@
 ---
-title: "Planning the writing app"
+title: "New Badass Novel Writing App: Planning the writing app"
+description: "New Badass Novel Writing App documentation \u2014 Planning the writing app."
 sidebar:
+  label: "Planning the writing app"
   order: 2
 ---
 

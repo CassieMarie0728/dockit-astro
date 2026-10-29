@@ -1,6 +1,8 @@
 ---
-title: "Setup and commands"
+title: "MCP Hub: Setup and commands"
+description: "MCP Hub documentation \u2014 Setup and commands."
 sidebar:
+  label: "Setup and commands"
   order: 2
 ---
 

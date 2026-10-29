@@ -31,3 +31,7 @@ Record the project, branch or commit, exact command, error output, platform, and
 ## Find a task
 
 [What are you trying to do?](/tasks/) routes you straight to a tutorial, troubleshooting guide or readiness checklist.
+
+## Understand the terms
+
+The [glossary](/glossary/) explains API, MCP, tRPC, D1, overlays and backup terminology used throughout the guides.
