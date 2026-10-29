@@ -13,13 +13,14 @@
     "check": "astro check",
     "deploy:cf-workers": "npm run build:release && wrangler deploy",
     "preview:cf-workers": "npm run build && wrangler dev",
-    "check:links": "python3 scripts/check_links.py",
+    "check:links": "node scripts/check_links.mjs",
     "test:links": "python3 -m unittest discover -s scripts -p 'test_*.py'",
-    "validate": "npm run test:links && npm run test:site-url && npm run build && npm run check:links && npm run check:structure",
+    "validate": "npm run test:links && npm run test:site-url && npm run test:base-path && npm run build && npm run check:links && npm run check:structure",
     "check:structure": "python3 scripts/check_structure.py",
     "test:site-url": "node --test scripts/test_site_url.mjs",
     "check:release": "node scripts/check_site_url.mjs",
-    "build:release": "npm run check:release && npm run build"
+    "build:release": "npm run check:release && npm run build",
+    "test:base-path": "node --test scripts/test_base_path.mjs"
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",

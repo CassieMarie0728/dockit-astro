@@ -79,3 +79,11 @@ A release build using the reserved test origin `https://codex.example.test` gene
 GitHub metadata still pointed to the original theme homepage, GitHub Pages was disabled, and the inspected commit’s status list supplied no deployment URL. The connected browser could not initialize in this session. An actual preview URL is still needed for interactive navigation, search, mobile layout and accessibility checks; none of those is recorded as passed.
 
 The release fixture also exposed a stale-output problem: a subsequent local build retained the prior sitemap. Builds now clean the generated dist directory before Astro runs. The final no-SITE_URL validation verifies that the fixture sitemap is absent.
+
+## GitHub Pages setup follow-up
+
+The user chose independent GitHub hosting instead of relying on a CMS trial. The setup now includes a GitHub Actions Pages workflow and deployment-base support across Markdown links, custom navigation, homepage cards and static validation. The intended origin is `https://cassiemarie0728.github.io` with BASE_PATH `/dockit-astro`.
+
+A local Pages-path build passed with 53 pages and no internal href errors. Six base-path test groups and two extra link-checker fixtures cover prefixing, already-prefixed paths, external/relative/fragment links, unsafe base rejection and missing-prefix failures. These are build/fixture checks; the workflow and live site remain unverified until Pages is enabled and the deployed URL is checked.
+
+Pages follow-up also checks script/image src destinations and both root and repository-subpath builds. The link-check wrapper reads BASE_PATH from the same build environment files as Astro. No deployment or interactive browser result is claimed from these checks.

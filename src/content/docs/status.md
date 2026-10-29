@@ -50,3 +50,7 @@ These application issues are documented here; this hub change does not fix their
 ## Deployment validation
 
 [Deployment guide](/deployment/) separates local build checks from release settings and live browser acceptance. An actual public preview URL is still needed to complete interactive validation.
+
+## Independent GitHub hosting
+
+The [Pages deployment guide](/deployment/) supersedes the earlier root-host-only limitation. The workflow supplies a canonical origin and repository base path. The first hosted run still needs GitHub Actions selected as Pages Source and a successful deployment.

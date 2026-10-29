@@ -69,3 +69,5 @@ These checks do not evaluate contrast, visual layout, focus order, live JavaScri
 ## Release configuration
 
 [Build and release instructions](/deployment/) explain SITE_URL, supported Node/pnpm versions and the checks still needed on the real preview. `npm run validate` now includes canonical-URL parser tests.
+
+For project-site builds, BASE_PATH is also used by the generated-link checker. [GitHub Pages setup](/deployment/) explains the workflow and how to keep editing after the Sitepins trial.

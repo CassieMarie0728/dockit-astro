@@ -1,63 +1,70 @@
 ---
-title: Build and release the Chaos Codex
-description: Configure the public URL, select a supported runtime and verify a deployed hub.
+title: Deploy the Chaos Codex to GitHub Pages
+description: Host the existing Astro/Starlight hub from GitHub without a Sitepins or Vercel dependency.
 sidebar:
   order: 3
 ---
 
-## Current release boundary
+## The setup
 
-The repo contains hosting configuration, but its inherited GitHub homepage points to the original theme, not a verified Chaos Codex deployment. GitHub Pages was disabled when inspected. No actual preview URL was established in this session, and the connected browser was unavailable. These observations do not prove the site is unpublished elsewhere.
+The Chaos Codex is a static Astro/Starlight site in your GitHub repository. Sitepins can edit the content, but the site does not depend on that editor to build or run. We are keeping the customized DocKit template and deploying it through GitHub Actions.
 
-## 1. Use the supported toolchain
+Expected address after a successful deployment:
 
-The installed Astro 7.0.3 package requires Node 22.12 or newer. This repository now recommends Node 24 through `.nvmrc`, declares the minimum in `package.json`, and pins pnpm 10.4.1. Netlify’s old Node 20 pin has been replaced with Node 24.
+**https://cassiemarie0728.github.io/dockit-astro/**
 
-Install from the repository root with the committed pnpm lockfile:
+That is the planned Pages address, not a claim that it is already live.
+
+## One-time GitHub setting
+
+Open the repository’s **Settings → Pages → Build and deployment** and select **GitHub Actions** as Source. The connected GitHub tools cannot change this administrative setting here.
+
+Merge the setup PR. The **Deploy Chaos Codex to GitHub Pages** workflow runs on pushes to main. If needed, open **Actions**, choose that workflow and use **Run workflow**. Once the build and deploy jobs succeed, the deployment environment links to the published URL.
+
+Do not select branch-based Jekyll publishing for the raw source: this project needs an Astro build.
+
+## What the workflow does
+
+1. Checks out the repository.
+2. Uses Node 24 and pnpm 10.4.1.
+3. Checks release configuration, runs fixture tests, builds Astro and validates links/structure.
+4. Uploads the static artifact using the official Astro action.
+5. Deploys that artifact with the GitHub Pages deploy action.
+
+The workflow uses the built-in GitHub token permissions for Pages; no Vercel token or Sitepins account is needed. Original theme attribution/license remains in the repo.
+
+## Why two URL settings exist
+
+| Setting | Value for this repo | Purpose |
+| --- | --- | --- |
+| SITE_URL | `https://cassiemarie0728.github.io` | Canonical host origin |
+| BASE_PATH | `/dockit-astro` | Project-site path prefix |
+
+Astro, the Markdown link transform and custom navigation helpers apply the path prefix. The generated site’s internal hrefs are checked against it so a root-only link cannot accidentally escape to the account homepage. The search component uses Astro’s base URL for its Pagefind assets and results.
+
+The workflow supplies these values. You do not need to create repository secrets for public URL settings.
+
+## Local builds and other hosts
+
+Use the committed pnpm lockfile. Node must be at least 22.12; `.nvmrc` recommends 24. The full docs checks also need Python 3.9+.
 
 ```sh
 corepack pnpm install --frozen-lockfile
+npm run validate
 ```
 
-The documentation checks also require Python 3.9+. A plain site build only requires the Node build toolchain.
+Local validation defaults to the host root. To test the Pages layout locally, set SITE_URL and BASE_PATH in the build environment or an uncommitted `.env.production` before running validation. Every build cleans `dist` first, preventing an old sitemap from surviving into a different deployment.
 
-## 2. Set the canonical deployment origin
+For a later custom domain at its root, use that origin as SITE_URL and leave BASE_PATH blank. Update the hosting/domain settings separately; changing a build variable alone does not configure DNS or domain ownership. Root-host Netlify/Cloudflare configurations remain optional alternatives, not requirements for Pages.
 
-Configure `SITE_URL` in the host’s build environment, or copy `.env.example` to `.env.production` locally and set the value there. Use the actual public HTTPS origin where the site will be served, without credentials, query, fragment or a subpath. Keep the local environment file out of Git.
+## Verify after deployment
 
-Do not use the inherited theme homepage or a made-up domain. Current navigation uses root-relative links, so this version is not configured for a GitHub Pages project subdirectory.
+Check the homepage, a long guide, Find a Task, Known Issues and a nonexistent URL. Open search and follow a result. Check theme switching, menus, keyboard focus and layout on a phone-sized viewport. Confirm canonical and sitemap URLs include `/dockit-astro/` for this project-site deployment.
 
-`SITE_URL` is public build configuration, not a credential. Its parser validates syntax and hosting shape; it does not prove domain ownership, DNS, TLS or live reachability.
+Local builds and static checks are recorded in the validation page. A successful local build does not prove the GitHub workflow or interactive browser checks have passed.
 
-## 3. Build with the right gate
+## Keep working after the trial
 
-| Command | Purpose |
-| --- | --- |
-| `npm run validate` | Fixture tests, local static build, links and structure |
-| `npm run check:release` | Require an explicit syntactically valid canonical HTTPS origin |
-| `npm run build:release` | Release check followed by Astro build |
-| `npm run preview` | Serve a built site locally where local hosting is available |
+Edit Markdown through GitHub, a local editor or any Git-based editor you prefer. Commit to a branch, review the changes and merge. Pushes to main rebuild the hosted site. The source, styling and docs stay in your repository; the Sitepins trial is not part of the runtime.
 
-Every build first clears the generated `dist` directory so a previous domain’s sitemap or a deleted page cannot survive into the new output. A local build may omit SITE_URL; sitemap generation will then be skipped. A release build refuses to proceed without it. With SITE_URL set, Astro emits canonical metadata and the sitemap integration can generate its files.
-
-## 4. Hosting configuration
-
-**Netlify:** the checked-in config uses Node 24, pnpm 10.4.1, `corepack pnpm build:release`, and publishes `dist`. Set SITE_URL in the hosting build variables before enabling or merging this release configuration.
-
-**Cloudflare Workers static assets:** `wrangler.jsonc` serves `dist`. `npm run deploy:cf-workers` now runs the release build before the existing deploy command. This operation publishes remotely; it was not run in the documentation pass. Confirm the selected Cloudflare account and intended Worker before using it.
-
-**Sitepins:** content editing and hosting are separate concerns. Confirm which hosting service consumes the connected repo and which branch it deploys. A successful content save or merged PR is not proof that the new site is live.
-
-## 5. Verify the deployed build
-
-Record the deployed commit and actual URL. Then check:
-
-- Home, one long project page, Find a Task and Known Issues load directly.
-- A nonexistent path returns the intended 404 page.
-- Search opens, finds a project-specific title, and its result navigates correctly.
-- Mobile menus open, Escape closes them, and keyboard focus stays usable.
-- Theme switching works on a narrow and wide viewport.
-- Canonical URLs and sitemap locations use the intended origin.
-- Downloaded assets load without console/network errors.
-
-The browser checks above are pending. Do not mark them passed from static HTML or a successful deployment log alone.
+Reference: [Astro’s GitHub Pages deployment guide](https://docs.astro.build/en/guides/deploy/github/).

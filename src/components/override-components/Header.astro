@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils/base-path.mjs";
 import SiteTitle from "./SiteTitle.astro";
 import { getTranslations } from "@/lib/utils/languagePerser";
 
@@ -12,8 +13,9 @@ const locale = Astro.currentLocale || "en";
 
 const menu = await getTranslations(locale || "en");
 
-const { settings, navigation_button } = config;
-const { main }: { main: any[] } = menu;
+const { settings } = config;
+const navigation_button = { ...config.navigation_button, link: withBase(config.navigation_button.link) };
+const main = menu.main.map((item: any) => ({ ...item, url: withBase(item.url), children: item.children?.map((child: any) => ({ ...child, url: withBase(child.url) })) }));
 const pathname = Astro.url.pathname;
 
 const hasSidebar = Astro.locals.starlightRoute.hasSidebar;

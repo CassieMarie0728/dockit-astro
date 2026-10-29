@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils/base-path.mjs";
 import config from "@/config/config.json";
 import social from "@/config/social.json";
 import { Icon } from "@astrojs/starlight/components";
@@ -23,7 +24,7 @@ const currentLocal = Astro.currentLocale || "en";
             <ul>
               {footer.community?.links.map((link: any) => (
                 <li>
-                  <a href={link.url}>{link.name}</a>
+                  <a href={withBase(link.url)}>{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -37,7 +38,7 @@ const currentLocal = Astro.currentLocale || "en";
             <ul>
               {footer.help_links?.links.map((link: any) => (
                 <li>
-                  <a href={link.url}>{link.name}</a>
+                  <a href={withBase(link.url)}>{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -51,7 +52,7 @@ const currentLocal = Astro.currentLocale || "en";
             <ul>
               {footer.company?.links.map((link: any) => (
                 <li>
-                  <a href={link.url}>{link.name}</a>
+                  <a href={withBase(link.url)}>{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -111,7 +112,7 @@ const currentLocal = Astro.currentLocale || "en";
     </div>
     <div class="bottom-footer">
       <p set:html={markdownify(config?.params?.copyright)} />
-      <a href="/maintaining-the-codex/">Documentation standards</a>
+      <a href={withBase("/maintaining-the-codex/")}>Documentation standards</a>
     </div>
   </div>
 </footer>
