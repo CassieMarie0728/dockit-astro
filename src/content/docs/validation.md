@@ -67,3 +67,15 @@ Decorative template image backgrounds were replaced with CSS brand gradients, a 
 No interactive browser, mobile viewport, screen-reader or contrast audit was performed in this pass. Static semantic checks are a bounded regression check, not accessibility certification.
 
 Phase 6 validation passed: 12 fixture tests, a 52-page Astro build, zero local link/fragment errors and zero structural errors. Rendered active-page markers were also verified on Home, Find a Task, Documentation Status and Known Issues.
+
+## Phase 7: deployment runtime and canonical-URL checks
+
+The installed Astro 7.0.3 manifest requires Node >=22.12.0; the inherited Netlify Node 20 setting was incompatible. Hosting now recommends Node 24 and pins pnpm 10.4.1.
+
+Five Node test groups passed for optional/local URL handling, normalized HTTPS roots, malformed/HTTP values, credentials/query/fragment rejection, and subpath/localhost rejection. The release check correctly failed when SITE_URL was unset.
+
+A release build using the reserved test origin `https://codex.example.test` generated 53 pages, a sitemap index and the expected canonical URL on the deployment guide. Link and structural checks reported zero errors. This was an isolated build fixture, not a published deployment or a verified real domain. Final local validation runs with no test origin configured.
+
+GitHub metadata still pointed to the original theme homepage, GitHub Pages was disabled, and the inspected commit’s status list supplied no deployment URL. The connected browser could not initialize in this session. An actual preview URL is still needed for interactive navigation, search, mobile layout and accessibility checks; none of those is recorded as passed.
+
+The release fixture also exposed a stale-output problem: a subsequent local build retained the prior sitemap. Builds now clean the generated dist directory before Astro runs. The final no-SITE_URL validation verifies that the fixture sitemap is absent.

@@ -8,15 +8,18 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/clean-build.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "deploy:cf-workers": "npm run build && wrangler deploy",
+    "deploy:cf-workers": "npm run build:release && wrangler deploy",
     "preview:cf-workers": "npm run build && wrangler dev",
     "check:links": "python3 scripts/check_links.py",
     "test:links": "python3 -m unittest discover -s scripts -p 'test_*.py'",
-    "validate": "npm run test:links && npm run build && npm run check:links && npm run check:structure",
-    "check:structure": "python3 scripts/check_structure.py"
+    "validate": "npm run test:links && npm run test:site-url && npm run build && npm run check:links && npm run check:structure",
+    "check:structure": "python3 scripts/check_structure.py",
+    "test:site-url": "node --test scripts/test_site_url.mjs",
+    "check:release": "node scripts/check_site_url.mjs",
+    "build:release": "npm run check:release && npm run build"
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",
@@ -43,5 +46,9 @@
       "sharp",
       "workerd"
     ]
+  },
+  "packageManager": "pnpm@10.4.1",
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

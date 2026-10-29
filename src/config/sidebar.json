@@ -99,6 +99,10 @@
         {
           "label": "Source review index",
           "slug": "source-review"
+        },
+        {
+          "label": "Build and release",
+          "slug": "deployment"
         }
       ]
     }

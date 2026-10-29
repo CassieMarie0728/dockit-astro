@@ -33,7 +33,7 @@ Workspace system restrictions blocked both app-server health checks in the recor
 
 ## Hub release follow-up
 
-The hub builds, indexes search and checks static links/structure. Its canonical deployment URL is still unconfigured, so sitemap generation is skipped. Keyboard interactions, narrow-screen layout, search results, theme switching and a screen-reader pass still need interactive browser validation on the deployed site.
+The hub builds, indexes search and checks static links/structure. Its canonical deployment URL must be supplied through SITE_URL. Local builds may omit it and skip sitemap generation; release builds now require it. [Deployment instructions](/deployment/). Keyboard interactions, narrow-screen layout, search results, theme switching and a screen-reader pass still need interactive browser validation on the deployed site.
 
 ## Closing an issue
 

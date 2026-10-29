@@ -1,5 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import { loadEnv } from "vite";
+import { resolveSiteUrl } from "./scripts/site-url.mjs";
 import starlight from "@astrojs/starlight";
 import { viewTransitions } from "astro-vtbot/starlight-view-transitions";
 
@@ -19,6 +21,7 @@ export const locales = locals
 
 // https://astro.build/config
 export default defineConfig({
+  site: resolveSiteUrl(loadEnv(process.env.NODE_ENV || "production", process.cwd(), "SITE_URL").SITE_URL),
   image: {
     service: { entrypoint: "astro/assets/services/noop" },
   },

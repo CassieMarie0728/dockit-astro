@@ -32,3 +32,7 @@ A static site build verifies the docs can be generated. A source walkthrough exp
 ## Check a limitation before testing
 
 [Known issues and readiness dashboard](/known-issues/) brings confirmed defects, unsupported behavior and remaining acceptance checks into one place.
+
+## Publish or verify the hub
+
+[Build and release the Chaos Codex](/deployment/) covers hosting configuration and the pending live-browser checks.

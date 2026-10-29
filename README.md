@@ -17,3 +17,7 @@ npm run validate
 ```
 
 Runs checker fixture tests, builds the site, and checks local href destinations, heading fragments and basic HTML structure. External links are not fetched. The source review index and maintenance guide describe how to update evidence and Sitepins-edited pages.
+
+## Release build
+
+Use Node 24 (minimum 22.12) and the pinned pnpm 10.4.1. Set `SITE_URL` to the actual public HTTPS root origin in the host’s build environment or an uncommitted `.env.production`, then run `npm run build:release`. Local `npm run build` may omit the URL; it does not generate a canonical sitemap in that case. Netlify and the Cloudflare deploy script use the release gate. See the deployment guide before enabling a host build.
