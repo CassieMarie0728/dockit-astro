@@ -9,6 +9,10 @@
       "url": "/start-here/"
     },
     {
+      "name": "Find a Task",
+      "url": "/tasks/"
+    },
+    {
       "name": "Docs Status",
       "url": "/status/"
     }

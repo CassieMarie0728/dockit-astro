@@ -38,3 +38,7 @@ Settings exposes sign-in, “Sync This Device,” last-sync information and unre
 - [app/(tabs)/settings.tsx](https://github.com/CassieMarie0728/snippet-bubble-manager-v2/blob/51c0e8047bc5a8c3b574ab6bbd328e4e4b252bd9/app/(tabs)/settings.tsx)
 - [modules/floating-bubble/src/FloatingBubble.ts](https://github.com/CassieMarie0728/snippet-bubble-manager-v2/blob/51c0e8047bc5a8c3b574ab6bbd328e4e4b252bd9/modules/floating-bubble/src/FloatingBubble.ts)
 - [modules/floating-bubble/android/src/main/AndroidManifest.xml](https://github.com/CassieMarie0728/snippet-bubble-manager-v2/blob/51c0e8047bc5a8c3b574ab6bbd328e4e4b252bd9/modules/floating-bubble/android/src/main/AndroidManifest.xml)
+
+## Import limitation
+
+Mixed new-and-duplicate imports using Replace Matches have a reproduced index defect. [Read the known issue](/projects/snippet-bubble-manager-v2/known-import-issue/) before importing. The Settings JSON export is content-only; see [export contents](/projects/snippet-bubble-manager-v2/backup-restore/).

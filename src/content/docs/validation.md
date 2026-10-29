@@ -37,3 +37,15 @@ Neither local HTTP health check completed in this restricted runtime. OAuth logi
 ## Reproduce on a normal development machine
 
 Use the [Forge quickstart](/projects/jekyll-forge/local-quickstart/) or [MCP configuration guide](/projects/mcp-hub/configuration/). Record the exact commit and runtime. First confirm health reachability; then validate sign-in and one intended operation separately. Keep secrets and personal content out of reports.
+
+## Phase 4: import checks and export/readiness audit
+
+Run date: October 29, 2026, Node 24.22.1. The snippet parser/planner was imported directly through Node’s TypeScript support and exercised with synthetic data only.
+
+Five assertions passed: missing code is rejected; missing language defaults to Plaintext; skip counts two existing duplicates; copy counts one duplicate; and a duplicate-only replacement counts one replacement.
+
+A separate assertion reproduced the mixed-batch replacement defect: starting with A/B, importing new C before duplicate A with Replace Matches caused C to disappear. This is a **confirmed defect**, not a successful round-trip test. [Read the trigger and interim guidance](/projects/snippet-bubble-manager-v2/known-import-issue/).
+
+The inspected snippet commit is `51c0e8047bc5a8c3b574ab6bbd328e4e4b252bd9`. The VOID export/refinement audit used `e5b347312236bb2c6ab78233b01ea94c453a5f36`; Grief Ops readiness used `85534f2bcb8965e34c29742ed097c6c0443c0ad1`.
+
+VOID export-format descriptions and Grief Ops rendering status are source observations, not browser/download or app-runtime tests. No real snippets, provider keys, Notion pages or user documents were used.

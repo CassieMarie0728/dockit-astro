@@ -6,11 +6,13 @@ sidebar:
 
 **Evidence:** source inspected October 29, 2026. Runtime behavior has not been tested in this pass.
 
-## More than an empty starter
+## Navigation exists; rendering is still a scaffold
 
 `src/app/App.tsx` wraps the root navigator in the shared theme provider. The navigator starts at Ops Selector and registers Deployment Briefing, Locked Mode Briefing, Night Watch, Foreman and Road Captain Locked screens.
 
-Ops Selector links directly to Night Watch and Foreman. Road Captain routes to its locked screen. Feature flags for Road Captain, Drill Sergeant and Pit Boss are all false in the inspected file. Drill Sergeant and Pit Boss are not registered as full screens in this root navigator.
+The registered Night Watch, Foreman and Road Captain Locked home components return `null`. Shared Button and Text components also return `null`, so the selector is not established as a usable rendered screen. [Read the readiness gates](/projects/grief-ops-suite/readiness/).
+
+Ops Selector declares links directly to Night Watch and Foreman. Road Captain routes to its locked screen. Feature flags for Road Captain, Drill Sergeant and Pit Boss are all false in the inspected file. Drill Sergeant and Pit Boss are not registered as full screens in this root navigator.
 
 ## What remains skeletal
 

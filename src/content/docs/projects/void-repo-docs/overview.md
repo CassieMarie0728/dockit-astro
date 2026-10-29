@@ -24,3 +24,9 @@ Package content SHA at review: `92a123b75961b6c1cf42d9a21e80d286f14e59f6`.
 [Configuration guide](/projects/void-repo-docs/configuration/)
 
 [Workflow guide](/projects/void-repo-docs/workflows/)
+
+## Task guides and limitations
+
+- [Export tutorial](/projects/void-repo-docs/export-tutorial/)
+- [Refine tutorial](/projects/void-repo-docs/refine-tutorial/)
+- [Troubleshooting](/projects/void-repo-docs/troubleshooting/)
