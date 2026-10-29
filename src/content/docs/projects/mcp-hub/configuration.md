@@ -45,3 +45,7 @@ Request `/api/health` at the actual logged port, then confirm the client reaches
 - [server/_core/env.ts](https://github.com/CassieMarie0728/mcp-hub/blob/2f18e4afb9f680f782ce4090725f47e32f36fde2/server/_core/env.ts)
 - [server/_core/index.ts](https://github.com/CassieMarie0728/mcp-hub/blob/2f18e4afb9f680f782ce4090725f47e32f36fde2/server/_core/index.ts)
 - [constants/oauth.ts](https://github.com/CassieMarie0728/mcp-hub/blob/2f18e4afb9f680f782ce4090725f47e32f36fde2/constants/oauth.ts)
+
+## Recorded setup results
+
+[Read the setup validation record](/validation/) for the tested environment, successful install/build steps and runtime restrictions encountered.

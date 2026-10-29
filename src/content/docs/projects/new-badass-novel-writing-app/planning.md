@@ -31,3 +31,7 @@ Create a project, draft a chapter, save reliably, reopen it, and export usable t
 
 Technology stack, storage format, authentication, sync, licensing, accessibility targets, and release scope.
 
+
+## Detailed proposals
+
+[Product blueprint](/projects/new-badass-novel-writing-app/blueprint/) · [Recovery and export acceptance](/projects/new-badass-novel-writing-app/acceptance/)

@@ -4,7 +4,7 @@ sidebar:
   order: 2
 ---
 
-Review date: **October 29, 2026**. Phase 2 adds implementation walkthroughs; it does not certify application readiness.
+Review date: **October 29, 2026**. Phase 3 adds guided tutorials, troubleshooting and a novel-app blueprint. It does not certify application readiness.
 
 | Project | Source-backed coverage | Still needs execution |
 | --- | --- | --- |
@@ -19,9 +19,13 @@ Review date: **October 29, 2026**. Phase 2 adds implementation walkthroughs; it 
 
 MCP Hub’s inspected executable exposes tRPC under `/api/trpc`. The companion REST/OpenAPI documents are not evidence that `/connections` routes exist in that server. [Read the implementation reference](/projects/mcp-hub/api/).
 
+## Setup checks run
+
+Clean installs and builds passed for MCP Hub and Jekyll Forge; four local Forge D1 migrations also passed. Development servers were blocked by workspace system restrictions before HTTP health checks. [See exact commands and results](/validation/).
+
 ## Validation boundaries
 
-The hub’s static build and internal link destinations are checked for this change. Individual applications, OAuth services, model providers, remote databases and production deployments were not invoked. Source links on the new pages pin the exact inspected commits.
+The hub’s static build and internal link destinations are checked for this change. Local application setup was exercised only as recorded above. OAuth services, model providers, remote databases and production deployments were not invoked. Source links on the new pages pin the exact inspected commits.
 
 ## Next pass
 
