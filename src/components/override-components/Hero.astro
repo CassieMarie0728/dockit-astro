@@ -109,7 +109,7 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
   const totalHeight =
     (heroSection?.clientHeight || 0) + (header?.clientHeight || 0) + 24;
 
-  heroBG.style.height = `${totalHeight}px`;
+  if (heroBG) heroBG.style.height = `${totalHeight}px`;
 
   // make image element and add the path to src
   if (iconElements) {

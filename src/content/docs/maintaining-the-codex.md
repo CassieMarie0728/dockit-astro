@@ -43,9 +43,10 @@ The link checker requires **Python 3.9+** as well as the Node dependency toolcha
 npm run test:links
 npm run build
 npm run check:links
+npm run check:structure
 ```
 
-Or run all three in order:
+Or run the complete sequence in order:
 
 ```sh
 npm run validate
@@ -58,3 +59,9 @@ Run `validate` after edits so the checked build is current. Running only `check:
 ## Reviewing source changes
 
 Use the [source review index](/source-review/) to find inspected revisions and affected guides. Keep the [validation record](/validation/) and [documentation status](/status/) aligned with the evidence. Site generation and link checks do not establish that an application’s live login, publishing, provider calls or native device behavior works.
+
+## Static structure checks
+
+`npm run check:structure` checks one main landmark and one main heading per generated page, duplicate IDs, a named main-navigation landmark, and a named menu button with a valid controlled element and expanded-state attribute. The validate command now includes this check after build/link validation.
+
+These checks do not evaluate contrast, visual layout, focus order, live JavaScript interaction or screen-reader usability. Before release, verify the homepage, a long project guide and the known-issues dashboard on a narrow and wide screen. Use keyboard-only navigation to open/close menus, search, follow results and switch themes. Check the deployed site rather than treating a static build as an interactive acceptance pass.

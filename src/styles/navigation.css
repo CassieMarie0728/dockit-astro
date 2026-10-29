@@ -83,15 +83,15 @@
 .has-sidebar .hamburger-menu {
   @apply hidden;
 }
-input#nav-toggle:checked + label #show-button {
+button#nav-toggle[aria-expanded="true"] #show-button {
   @apply hidden;
 }
 
-input#nav-toggle:checked + label #hide-button {
+button#nav-toggle[aria-expanded="true"] #hide-button {
   @apply block;
 }
 
-input#nav-toggle:checked ~ #nav-menu {
+button#nav-toggle[aria-expanded="true"] ~ #nav-menu {
   @apply block;
 }
 /* theme-switcher */
@@ -118,3 +118,17 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 
+
+#nav-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.5rem;
+  background: transparent;
+}
+#nav-toggle:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--sl-color-white);
+  outline-offset: 4px;
+}

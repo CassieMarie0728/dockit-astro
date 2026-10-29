@@ -13,6 +13,10 @@
       "url": "/tasks/"
     },
     {
+      "name": "Known Issues",
+      "url": "/known-issues/"
+    },
+    {
       "name": "Docs Status",
       "url": "/status/"
     }

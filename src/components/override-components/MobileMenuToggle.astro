@@ -32,6 +32,7 @@ import {Icon} from '@astrojs/starlight/components';
 
 		setExpanded(expanded: boolean) {
 			this.setAttribute('aria-expanded', String(expanded));
+			this.btn.setAttribute('aria-expanded', String(expanded));
 			document.body.toggleAttribute('data-mobile-menu-expanded', expanded);
 		}
 

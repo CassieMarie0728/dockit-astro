@@ -4,7 +4,7 @@ sidebar:
   order: 2
 ---
 
-Review date: **October 29, 2026**. Phase 5 adds project-specific search titles, a glossary, source-review tracking and repeatable build/link validation. It does not certify application readiness.
+Review date: **October 29, 2026**. Phase 6 adds release cleanup, navigation semantics, a known-issues dashboard and static HTML structure checks. It does not certify application readiness.
 
 | Project | Source-backed coverage | Still needs execution |
 | --- | --- | --- |
@@ -42,3 +42,7 @@ These application issues are documented here; this hub change does not fix their
 ## Hub maintenance checks
 
 `npm run validate` runs link-checker fixture tests, builds the hub and checks generated local destinations and heading anchors. See [maintenance instructions](/maintaining-the-codex/). This checks documentation integrity only.
+
+## Release dashboard
+
+[Known issues and readiness](/known-issues/) consolidates the application limitations and remaining hub release checks. Phase 6 adds semantic navigation controls, active-page markers, decorative brand backgrounds and static HTML structure validation. Interactive browser/accessibility validation remains outstanding.

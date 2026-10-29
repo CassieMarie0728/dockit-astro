@@ -16,4 +16,4 @@ Requires the project’s Node dependencies and Python 3.9+:
 npm run validate
 ```
 
-Runs checker fixture tests, builds the site, and checks local href destinations and heading fragments. External links are not fetched. The source review index and maintenance guide describe how to update evidence and Sitepins-edited pages.
+Runs checker fixture tests, builds the site, and checks local href destinations, heading fragments and basic HTML structure. External links are not fetched. The source review index and maintenance guide describe how to update evidence and Sitepins-edited pages.

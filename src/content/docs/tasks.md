@@ -28,3 +28,7 @@ A static site build verifies the docs can be generated. A source walkthrough exp
 ## Find a term or maintain a page
 
 [Glossary](/glossary/) · [Source review index](/source-review/) · [Editing and validation](/maintaining-the-codex/)
+
+## Check a limitation before testing
+
+[Known issues and readiness dashboard](/known-issues/) brings confirmed defects, unsupported behavior and remaining acceptance checks into one place.
