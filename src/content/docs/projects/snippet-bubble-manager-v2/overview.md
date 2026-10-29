@@ -24,3 +24,10 @@ Package content SHA at review: `72f9e8f9790a74da28660cc8d4254d870eaadff1`.
 [Architecture and implementation notes](/projects/snippet-bubble-manager-v2/architecture/)
 
 [Workflow guide](/projects/snippet-bubble-manager-v2/workflows/)
+
+## Task guides and limitations
+
+- [Backup restore](/projects/snippet-bubble-manager-v2/backup-restore/)
+- [Overlay tutorial](/projects/snippet-bubble-manager-v2/overlay-tutorial/)
+- [Known import issue](/projects/snippet-bubble-manager-v2/known-import-issue/)
+- [Troubleshooting](/projects/snippet-bubble-manager-v2/troubleshooting/)

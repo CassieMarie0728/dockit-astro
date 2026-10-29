@@ -8,6 +8,10 @@
           "slug": "start-here"
         },
         {
+          "label": "Find a task",
+          "slug": "tasks"
+        },
+        {
           "label": "Documentation status",
           "slug": "status"
         },

@@ -4,16 +4,16 @@ sidebar:
   order: 2
 ---
 
-Review date: **October 29, 2026**. Phase 3 adds guided tutorials, troubleshooting and a novel-app blueprint. It does not certify application readiness.
+Review date: **October 29, 2026**. Phase 4 adds task navigation, Snippet Bubbles/VOID tutorials and a more precise Grief Ops readiness audit. It does not certify application readiness.
 
 | Project | Source-backed coverage | Still needs execution |
 | --- | --- | --- |
 | [MCP Hub](/projects/mcp-hub/architecture/) | Request flow, auth boundary, tRPC procedure reference, environment mapping | Login, database, remote server discovery and tool calls |
 | [Jekyll Forge](/projects/jekyll-forge/architecture/) | Worker bindings, API guards, route map and deployment distinctions | Clean D1 setup, GitHub authorization, editing and publishing |
-| [Snippet Bubble Manager v2](/projects/snippet-bubble-manager-v2/workflows/) | Local storage, import/export, overlay permission flow and AI boundaries | Android build, two-device sync, backup round trip and quota tests |
-| [VOID Repo Docs](/projects/void-repo-docs/workflows/) | Generation flow, provider selection, draft storage and configuration | Live model calls, refine flow, Notion export and Android packaging |
+| [Snippet Bubble Manager v2](/projects/snippet-bubble-manager-v2/workflows/) | Content export limitations, reproduced import defect, overlay tutorial and AI boundaries | Android build, two-device sync, backup round trip and quota tests |
+| [VOID Repo Docs](/projects/void-repo-docs/workflows/) | Generation/refinement boundaries, export formats, draft storage and configuration | Live model calls, refine flow, Notion export and Android packaging |
 | [Novel Writing App](/projects/new-badass-novel-writing-app/planning/) | Proposed product decisions and first milestone | Product decisions and implementation |
-| [Grief Ops Suite](/projects/grief-ops-suite/architecture/) | Screen map, feature flags and identified startup/service gaps | Entry wiring, dependencies, working flows and persistence |
+| [Grief Ops Suite](/projects/grief-ops-suite/architecture/) | Null-rendering screen/control stubs, feature flags and readiness gates | Entry wiring, dependencies, working flows and persistence |
 
 ## API reconciliation
 
@@ -30,3 +30,11 @@ The hub’s static build and internal link destinations are checked for this cha
 ## Next pass
 
 Use the verification pages to exercise each project in a clean environment. Fixes to application code should be isolated in the relevant repository, with the hub updated once behavior changes.
+
+## Known issues surfaced in Phase 4
+
+- Snippet Bubble mixed Replace Matches imports can overwrite a newly inserted entry. [Details and interim guidance](/projects/snippet-bubble-manager-v2/known-import-issue/).
+- VOID’s DOCX-labeled download contains HTML rather than a native OOXML package. [Export behavior](/projects/void-repo-docs/export-tutorial/).
+- Grief Ops’ registered home screens and shared Text/Button controls return null. [Readiness gates](/projects/grief-ops-suite/readiness/).
+
+These application issues are documented here; this hub change does not fix their source code.

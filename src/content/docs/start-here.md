@@ -27,3 +27,7 @@ This is the central documentation hub for Cassandra Crossno’s software project
 
 Record the project, branch or commit, exact command, error output, platform, and what you expected. Remove secrets before sharing logs. Open an issue in the relevant project repository.
 
+
+## Find a task
+
+[What are you trying to do?](/tasks/) routes you straight to a tutorial, troubleshooting guide or readiness checklist.
