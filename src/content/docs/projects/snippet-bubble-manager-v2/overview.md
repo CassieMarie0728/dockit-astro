@@ -18,3 +18,9 @@ Package content SHA at review: `72f9e8f9790a74da28660cc8d4254d870eaadff1`.
 
 [Setup and commands](/projects/snippet-bubble-manager-v2/setup/) · [Verification backlog](/projects/snippet-bubble-manager-v2/verification/)
 
+
+## Source walkthrough
+
+[Architecture and implementation notes](/projects/snippet-bubble-manager-v2/architecture/)
+
+[Workflow guide](/projects/snippet-bubble-manager-v2/workflows/)

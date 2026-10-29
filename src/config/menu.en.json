@@ -18,16 +18,16 @@
       "title": "Source Code",
       "links": [
         {
-          "name": "GitHub Projects",
-          "url": "https://github.com/CassieMarie0728"
+          "name": "MCP Hub",
+          "url": "https://github.com/CassieMarie0728/mcp-hub"
         },
         {
-          "name": "Documentation Status",
-          "url": "/status/"
+          "name": "Jekyll Forge",
+          "url": "https://github.com/CassieMarie0728/jekyll-forge"
         },
         {
-          "name": "Maintain the Codex",
-          "url": "/maintaining-the-codex/"
+          "name": "VOID Repo Docs",
+          "url": "https://github.com/CassieMarie0728/void-repo-docs"
         }
       ]
     },
@@ -35,16 +35,16 @@
       "title": "Find Your Way",
       "links": [
         {
-          "name": "GitHub Projects",
-          "url": "https://github.com/CassieMarie0728"
+          "name": "Project directory",
+          "url": "/start-here/"
         },
         {
-          "name": "Documentation Status",
+          "name": "API reference",
+          "url": "/projects/mcp-hub/api/"
+        },
+        {
+          "name": "Documentation status",
           "url": "/status/"
-        },
-        {
-          "name": "Maintain the Codex",
-          "url": "/maintaining-the-codex/"
         }
       ]
     },
